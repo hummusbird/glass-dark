@@ -7,8 +7,8 @@
  */
 
 /* USRBG compatibility CSS */
-@import url('https://discord-custom-covers.github.io/usrbg/dist/usrbg.css');
 
+@import url("https://discord-custom-covers.github.io/usrbg/snippets/userPopouts.css");
 :root{
 	
 	/* Blur mode */
@@ -47,29 +47,6 @@
 	
 }
 
-.userPopout-3XzG_A .wrapper-3t9DeA::after {
-	content: '';
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -2;
-	opacity: .6;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: var(--user-popout-position) center;
-	background-image: var(--user-background);
-	
-
-}
-
-
-
-
-
-
-
 /* Glasscord additions to the normal header */
 .theme-dark .headerNormal-T_seeN {
 	z-index: 0;
@@ -78,135 +55,11 @@
 
 .avatar-37jOim { border-radius: 17px !important; } /* Can be modified appropriately */
 
-
-
-.headerNormal-T_seeN::after {
-	content: '';
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: #00000000;
-	z-index: -1;
-	backdrop-filter: blur(5px);
-
-}
-
-.headerPlaying-j0WQBV, .headerStreaming-2FjmGz {
-	z-index: 0;
-	background: #f4206a00
-}
-
-.headerPlaying-j0WQBV::after, .headerStreaming-2FjmGz::after {
-	content: '';
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: #bd1c1c00;
-	z-index: -1;
-	backdrop-filter: blur(5px);
-}
-
-.headerSpotify-zpWxgT {
-	z-index: 0;
-	background: #000000
-}
-
-.headerSpotify-zpWxgT::after {
-	content: '';
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: #1db95400;
-	z-index: -1;
-	backdrop-filter: blur(5px);
-
-}
-
-.body-3iLsc4 {
-	background: var(--background-secondary-chat) !important;
-}
-
-.userPopout-3XzG_A::after {
-	content: '';
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: var(--background-pinned);
-	z-index: -1;
-}
-
-/* EXPANDED */
-.header-QKLPzZ .wrapper-3t9DeA::after {
-	content: '';
-	position: absolute;
-	top: var(--usrbg-modal-x-offset);
-	left: var(--usrbg-modal-y-offset);
-	width: var(--usrbg-modal-width);
-	height: var(--usrbg-modal-height);
-	opacity: 1;
-	background: var(--user-background) center/cover no-repeat;
-	z-index: -1;
-	backdrop-filter: blur(5px);
-}
-
 /* Glasscord additions to Usrbg expanded */
 .topSectionNormal-2-vo2m {
 	z-index: 0;
 }
 
-.topSectionNormal-2-vo2m::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	backdrop-filter: blur(5px);
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: #00000033;
-	z-index: -1;
-}
-
-.topSectionPlaying-1J5E4n {
-	z-index: 0;
-	
-}
-
-.topSectionPlaying-1J5E4n::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	backdrop-filter: blur(5px);
-	width: 100%;
-	height: 100%;
-	background: #000000a4;
-	z-index: -1;
-}
-
-.topSectionSpotify-1lI0-P {
-	z-index: 0;
-	
-}
-
-.topSectionSpotify-1lI0-P::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: #00000062;
-	backdrop-filter: blur(5px);
-	z-index: -1;
-}
 
 .body-3ND3kc {
 	background-color: var(--background-secondary-chat) !important;
