@@ -1,3 +1,1 @@
-# glass-dark
-
-Works with glasscord
+"# glass-dark" 

@@ -1,16 +1,16 @@
 /**
- * @name glass_dark_2
- * @description glass_dark v2
+ * @name glass_dark_4
+ * @description glass_dark v4
  * @author hummusbird
- * @version 2
+ * @version 4
  * @requires Glasscord>=0.0.5
  */
 
 /* USRBG compatibility CSS */
+@import url('https://discord-custom-covers.github.io/usrbg/dist/usrbg.css');
 
-@import url("https://discord-custom-covers.github.io/usrbg/snippets/userPopouts.css");
 :root{
-	
+
 	/* Blur mode */
 	--glasscord-win-blur: blurbehind;
 
@@ -28,13 +28,13 @@
 
 	/* USRBG Compatibility */
 	/* Please refer to https://github.com/Discord-Custom-Covers/usrbg */
-	
+
 	/* Distance from the avatar container to the edge of the modal */
-	--usrbg-modal-x-offset: -34px; 
+	--usrbg-modal-x-offset: -34px;
 	--usrbg-modal-y-offset: -20px;
-	
+
 	/* Maximum width / height of modal */
-	--usrbg-modal-width: 600px; 
+	--usrbg-modal-width: 600px;
 	--usrbg-modal-height: 600px;
 
 
@@ -44,8 +44,31 @@
 /* NORMAL */
 .reduce-motion .userPopout-3XzG_A {
 	transform: translateZ(0);
-	
+
 }
+
+.userPopout-3XzG_A .wrapper-3t9DeA::after {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -2;
+	opacity: .6;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: var(--user-popout-position) center;
+	background-image: var(--user-background);
+
+
+}
+
+
+
+
+
+
 
 /* Glasscord additions to the normal header */
 .theme-dark .headerNormal-T_seeN {
@@ -55,11 +78,135 @@
 
 .avatar-37jOim { border-radius: 17px !important; } /* Can be modified appropriately */
 
+
+
+.headerNormal-T_seeN::after {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #00000000;
+	z-index: -1;
+	backdrop-filter: blur(5px);
+
+}
+
+.headerPlaying-j0WQBV, .headerStreaming-2FjmGz {
+	z-index: 0;
+	background: #f4206a00
+}
+
+.headerPlaying-j0WQBV::after, .headerStreaming-2FjmGz::after {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #bd1c1c00;
+	z-index: -1;
+	backdrop-filter: blur(5px);
+}
+
+.headerSpotify-zpWxgT {
+	z-index: 0;
+	background: #000000
+}
+
+.headerSpotify-zpWxgT::after {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #1db95400;
+	z-index: -1;
+	backdrop-filter: blur(5px);
+
+}
+
+.body-3iLsc4 {
+	background: var(--background-secondary-chat) !important;
+}
+
+.userPopout-3XzG_A::after {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--background-pinned);
+	z-index: -1;
+}
+
+/* EXPANDED */
+.header-QKLPzZ .wrapper-3t9DeA::after {
+	content: '';
+	position: absolute;
+	top: var(--usrbg-modal-x-offset);
+	left: var(--usrbg-modal-y-offset);
+	width: var(--usrbg-modal-width);
+	height: var(--usrbg-modal-height);
+	opacity: 1;
+	background: var(--user-background) center/cover no-repeat;
+	z-index: -1;
+	backdrop-filter: blur(5px);
+}
+
 /* Glasscord additions to Usrbg expanded */
 .topSectionNormal-2-vo2m {
 	z-index: 0;
 }
 
+.topSectionNormal-2-vo2m::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	backdrop-filter: blur(5px);
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #00000033;
+	z-index: -1;
+}
+
+.topSectionPlaying-1J5E4n {
+	z-index: 0;
+
+}
+
+.topSectionPlaying-1J5E4n::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	backdrop-filter: blur(5px);
+	width: 100%;
+	height: 100%;
+	background: #000000a4;
+	z-index: -1;
+}
+
+.topSectionSpotify-1lI0-P {
+	z-index: 0;
+
+}
+
+.topSectionSpotify-1lI0-P::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #00000062;
+	backdrop-filter: blur(5px);
+	z-index: -1;
+}
 
 .body-3ND3kc {
 	background-color: var(--background-secondary-chat) !important;
@@ -92,7 +239,36 @@ body{
 	color: #f42069;
 }
 
+.root-g14mjS {
+    background-color: var(--background-primary);
+}
+
+.theme-dark .container-2cd8Mz {
+    background-color: var(--background-primary);
+}
+
+.container-18GwIk{
+    background-color: var(--background-popout);
+}
+.messagesPopoutWrap-3zryHW {
+    background-color: var(--background-popout);
+}
+
+.container-ZMc96U.themed-Hp1KC_ {
+    background: var(--background-popout);
+}
+
+.contentWrapper-3vHNP2 {
+    background-color: var(--background-popout);
+}
+
+.wordmarkWindows-2dq6rw  {
+	display: none;
+}
+
 .theme-dark{
+	--background-popout: #070707f5;
+	--channeltextarea-background: #0000004b;
 	--background-primary: #00000000; /* Inner chatbox */
 	--background-primary-alt: #00000059; /* delete + edit box background */
 	--background-secondary: #00000038; /* Outer boxes */
@@ -113,6 +289,7 @@ body{
 	--text-lights-out: #ffffff;
 	--background-titlebar: #0000003a;
     --scrollbar-auto-thumb: #00000041; /* scrollbar */
+	--scrollbar-auto-track: #00000000;
 	--background-floating: #000000ef;
 	--text-link: #f42069;
 	--background-accent: #d12360;
@@ -128,38 +305,14 @@ html.oldBrand{
 	--brand-experiment-600: #5a0d28;
 }
 
-.role-2irmRk {
-    font-size: 12px;
-    font-weight: 500;
-    background: #3d3d3d46;
-    border-radius: 6px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    height: 22px;
-    margin: 0 4px 4px 0;
-    padding: 4px;
-}
-
-.container-7uh5fX {
-    background-color: #131313d8;
-    border-radius: 8px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    cursor: default;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
-
 .message-2qnXI6:hover {
     transition: 0.15s;
 }
 
 html {
 	--brand-experiment: #f42069;
-	--brand-experiment-05a: #c2248059; 
-	--brand-experiment-10a: #c224802f; 
+	--brand-experiment-05a: #c2248059;
+	--brand-experiment-10a: #c224802f;
 	--brand-experiment-30a: #c224802f;
 	--brand-experiment-100: #ffffff;
 	--brand-experiment-600: #550a24;
@@ -181,16 +334,16 @@ body {
 	--info-positive-foreground: var(--old-green);
 	--status-positive-background: var(--old-green);
 	--text-positive: var(--old-green);
-  
+
 	/* Revert new red to old color */
 	--old-red: #f04747;
 	--text-danger: var(--old-red);
 	--info-danger-foreground: var(--old-red);
 	--status-danger-background: var(--old-red);
-  
+
 	/* Revert to old font var */
 	--font-display: var(--font-primary);
-  
+
   }
 
 /* Tweak positioning */
@@ -313,7 +466,7 @@ body {
 	background-color: #e3e5e850;
 }
 
-.theme-light .container-1D34oG {   
+.theme-light .container-1D34oG {
 	background-color: transparent;
 }
 
@@ -408,7 +561,7 @@ body {
 
 
 .platform-osx .topic-TCb_qw {
-    -webkit-app-region: no-drag;   
+    -webkit-app-region: no-drag;
 }
 
 .messagesPopoutWrap-1MQ1bW {
