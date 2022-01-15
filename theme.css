@@ -67,7 +67,12 @@
 
 
 
-
+.autocomplete-3NRXG8 {
+    background-color: var(--background-popout) !important; 
+}
+.selected-3H3-RC {
+    background-color: var(--background-secondary-alt) !important;
+}
 
 
 /* Glasscord additions to the normal header */
@@ -274,12 +279,10 @@ body{
 	display: none;
 }
 
-.autocomplete-3NRXG8 {
-    background-color: var(--background-popout);
+.theme-dark .inset-SbsSFp {
+    background-color: VAR(--background-secondary-alt);
 }
-.selected-3H3-RC {
-    background-color: var(--background-secondary-alt);
-}
+
 .popout-TdhJ6Z {
 	background-color: var(--background-popout);
 }
@@ -317,6 +320,15 @@ body{
 	--background-message-hover: #00000038;
 
 	--background-color: #000000;
+}
+
+.option-2KkUJO:after {
+    background: #00000000;
+	display: none;
+}
+
+.container-2McqkF {
+    background-color: var(--background-popout) !important;
 }
 
 html.oldBrand{
