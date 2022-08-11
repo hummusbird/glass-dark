@@ -266,6 +266,7 @@ body{
 	--background-mentioned: #d1236028;
 	--background-mentioned-hover: #d1236060;
 	--background-message-hover: #00000038;
+	--background-message-highlight: #270e1652;
 	--info-warning-foreground: #f42069;
 	--background-color: #000000;
 }
