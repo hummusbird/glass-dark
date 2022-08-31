@@ -2,7 +2,7 @@
  * @name glass_dark_4
  * @description glass_dark v4
  * @author hummusbird
- * @version 4.1
+ * @version 4.3
  */
 
 /* NORMAL */
@@ -235,6 +235,16 @@ body{
 	background-color: var(--background-popout);
 }
 
+.userPopoutInnerWithBanner-wsoegj {
+    background: var(--profile-gradient-overlay-color);
+	backdrop-filter: blur(5px);
+}
+
+.userPopoutInnerNonPremium-3zrFkp {
+    background: var(--profile-gradient-overlay-color);
+	backdrop-filter: blur(5px);
+}
+
 .theme-dark{
 	--background-popout: #070707f5;
 	--channeltextarea-background: #060708;
@@ -269,6 +279,9 @@ body{
 	--background-message-highlight: #270e1652;
 	--info-warning-foreground: #f42069;
 	--background-color: #000000;
+	--profile-gradient-overlay-color: #1111117a;
+	--profile-avatar-border-color: #1111117a;
+	--profile-body-background-color: #080808de;
 }
 
 .footer-31IekZ {
