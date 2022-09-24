@@ -235,12 +235,17 @@ body{
 	background-color: var(--background-popout);
 }
 
-.userPopoutInnerWithBanner-wsoegj {
+.userPopoutInnerWithBanner-24GX6I {
     background: var(--profile-gradient-overlay-color);
 	backdrop-filter: blur(5px);
 }
 
-.userPopoutInnerNonPremium-3zrFkp {
+.userPopoutInnerPremiumWithoutBanner-1FAP-h {
+	background: var(--profile-gradient-overlay-color);
+	backdrop-filter: blur(5px);
+}
+
+.userPopoutInnerNonPremium-1EOFgI {
     background: var(--profile-gradient-overlay-color);
 	backdrop-filter: blur(5px);
 }
@@ -282,6 +287,11 @@ body{
 	--profile-gradient-overlay-color: #1111117a;
 	--profile-avatar-border-color: #1111117a;
 	--profile-body-background-color: #080808de;
+	--profile-gradient-primary-color:#00000000;
+}
+
+.rolePill-2IJ1vo {
+	border:none;
 }
 
 .footer-31IekZ {
